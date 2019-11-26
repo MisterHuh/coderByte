@@ -1,5 +1,43 @@
+
+
+/* attempt #2 */
 function LongestWord(sen) {
 
+  var sen = sen;
+  var senTrimmed = sen.split(" ");
+  console.log("sentrimmed is: ", senTrimmed);
+
+  var answerArray = [];
+  var lengthArray = [];
+
+  for (var index = 0; index < senTrimmed.length; index++) {
+    var eachObj = {
+      word: senTrimmed[index],
+      length: senTrimmed[index].length
+    };
+    answerArray.push(eachObj);
+    lengthArray.push(senTrimmed[index].length);
+    console.log("eachObj is: ", eachObj)
+  }
+
+  console.log("answerArray is: ", answerArray)
+  console.log("lengthArray is: ", lengthArray);
+
+  var answer = Math.max.apply(Math, lengthArray);
+  console.log("answer is: ", answer);
+
+  for (answerIndex = 0; answerIndex < answerArray.length; answerIndex++) {
+    if (answer == answerArray[answerIndex]["length"]) {
+      console.log("the final answer is: ", answerArray[answerIndex]["word"])
+      return;
+    }
+  }
+
+}
+
+/* attempt #1 */
+/* dont work */
+function LongestWord(sen) {
   var strings = sen.split(" ");
   console.log("strings is: ", strings);
 
@@ -30,8 +68,6 @@ function LongestWord(sen) {
   console.log("answerArray; is: ", answerArray);
   console.log("answer is: ", answer);
   console.log("answerArray[2]'name']", answerArray[2]['name'])
-
-
 }
 
 
