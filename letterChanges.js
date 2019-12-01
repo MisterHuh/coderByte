@@ -20,7 +20,7 @@ function LetterChanges(str) {
     } else if (currentIndex === 101) {
       currentIndex = 69;
     } else if (currentIndex === 105) {
-      currentIndex = 74;
+      currentIndex = 73;
     } else if (currentIndex === 111) {
       currentIndex = 79;
     } else if (currentIndex === 117) {
