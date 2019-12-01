@@ -1,3 +1,32 @@
+/* attempt #2 */
+function LetterChanges(str) {
+
+  // var str = "";
+
+  var answer = "";
+
+  for (var index = 0; index < str.length; index++) {
+    var currentIndex = str.charCodeAt(index);
+    // console.log("current string is: ", str[index])
+    // console.log("current index is: ", currentIndex);
+
+    if (currentIndex === 57) {
+      currentIndex = 48;
+      answer += String.fromCharCode(currentIndex)
+      // answer += currentIndex;
+    }
+  }
+  // code goes here
+  // return str;
+  return answer;
+
+}
+
+// keep this function call here
+console.log(LetterChanges(readline()));
+
+
+/* attempt #1 */
 function LetterChanges(str) {
 
   var string = str;
