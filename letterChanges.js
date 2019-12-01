@@ -6,28 +6,26 @@ function LetterChanges(str) {
   for (var index = 0; index < str.length; index++) {
     var currentIndex = str.charCodeAt(index);
 
-    if (currentIndex === 57) {
-      currentIndex = 48;
-    } else if (currentIndex === 90) {
+    if (currentIndex === 90) {
       currentIndex = 65;
     } else if (currentIndex === 122) {
       currentIndex = 97;
-    } else if (currentIndex >= 48 || currentIndex <= 56 || currentIndex >= 65 || currentIndex <= 89 || currentIndex >= 97 || currentIndex <= 121) {
+    } else if ((currentIndex >= 65 && currentIndex <= 89) || (currentIndex >= 97 && currentIndex <= 121)) {
       currentIndex += 1;
     }
 
 
-    // if (currentIndex === 97) {
-    //   currentIndex = 65;
-    // } else if (currentIndex === 101) {
-    //   currentIndex = 69;
-    // } else if (currentIndex === 105) {
-    //   currentIndex = 74;
-    // } else if (currentIndex === 111) {
-    //   currentIndex = 79;
-    // } else if (currentIndex === 117) {
-    //   currentIndex = 85;
-    // }
+    if (currentIndex === 97) {
+      currentIndex = 65;
+    } else if (currentIndex === 101) {
+      currentIndex = 69;
+    } else if (currentIndex === 105) {
+      currentIndex = 74;
+    } else if (currentIndex === 111) {
+      currentIndex = 79;
+    } else if (currentIndex === 117) {
+      currentIndex = 85;
+    }
 
     answer += String.fromCharCode(currentIndex)
 
