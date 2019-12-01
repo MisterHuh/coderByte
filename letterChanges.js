@@ -1,28 +1,42 @@
 /* attempt #2 */
 function LetterChanges(str) {
 
-  // var str = "";
-
   var answer = "";
 
   for (var index = 0; index < str.length; index++) {
     var currentIndex = str.charCodeAt(index);
-    // console.log("current string is: ", str[index])
-    // console.log("current index is: ", currentIndex);
 
     if (currentIndex === 57) {
       currentIndex = 48;
-      answer += String.fromCharCode(currentIndex)
-      // answer += currentIndex;
+    } else if (currentIndex === 90) {
+      currentIndex = 65;
+    } else if (currentIndex === 122) {
+      currentIndex = 97;
+    } else if (currentIndex >= 48 || currentIndex <= 56 || currentIndex >= 65 || currentIndex <= 89 || currentIndex >= 97 || currentIndex <= 121) {
+      currentIndex += 1;
     }
+
+
+    // if (currentIndex === 97) {
+    //   currentIndex = 65;
+    // } else if (currentIndex === 101) {
+    //   currentIndex = 69;
+    // } else if (currentIndex === 105) {
+    //   currentIndex = 74;
+    // } else if (currentIndex === 111) {
+    //   currentIndex = 79;
+    // } else if (currentIndex === 117) {
+    //   currentIndex = 85;
+    // }
+
+    answer += String.fromCharCode(currentIndex)
+
   }
-  // code goes here
-  // return str;
+
   return answer;
 
 }
 
-// keep this function call here
 console.log(LetterChanges(readline()));
 
 
