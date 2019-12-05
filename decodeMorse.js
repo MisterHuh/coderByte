@@ -5,5 +5,5 @@ $(document).ready(decodeMorse('....   .   -.--'));
 function decodeMorse(morseCode) {
   var test = morseCode.split("   ");
   console.log("test is: ", test);
-  //your code here
+  // this becomes an array
 }
